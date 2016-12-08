@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WebViewTemplate" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,50 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JZB-sJ-b9C">
+                                <rect key="frame" x="0.0" y="50" width="375" height="617"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nCj-gR-0Zi">
+                                <rect key="frame" x="0.0" y="20" width="187.5" height="30"/>
+                                <state key="normal" title="Clear Local Storage">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="ClearCacheButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SQd-Co-EvE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mu0-i1-ZVu">
+                                <rect key="frame" x="187.5" y="20" width="187.5" height="30"/>
+                                <state key="normal" title="Reload"/>
+                                <connections>
+                                    <action selector="btnReload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qah-0G-Oqo"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="nCj-gR-0Zi" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="0pf-fk-6gK"/>
+                            <constraint firstItem="JZB-sJ-b9C" firstAttribute="top" secondItem="Mu0-i1-ZVu" secondAttribute="bottom" id="Gxg-t3-Nvh"/>
+                            <constraint firstAttribute="trailing" secondItem="Mu0-i1-ZVu" secondAttribute="trailing" id="UvC-d8-8l9"/>
+                            <constraint firstItem="nCj-gR-0Zi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dGy-z0-fks"/>
+                            <constraint firstItem="JZB-sJ-b9C" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dtv-zI-QPQ"/>
+                            <constraint firstItem="Mu0-i1-ZVu" firstAttribute="leading" secondItem="nCj-gR-0Zi" secondAttribute="trailing" id="jLf-7W-1el"/>
+                            <constraint firstItem="nCj-gR-0Zi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="uVt-fa-QLq"/>
+                            <constraint firstItem="Mu0-i1-ZVu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="vDu-9r-u1Y"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JZB-sJ-b9C" secondAttribute="bottom" id="whB-L1-tdp"/>
+                            <constraint firstAttribute="trailing" secondItem="JZB-sJ-b9C" secondAttribute="trailing" id="z5E-1o-jmh"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="myWebView" destination="JZB-sJ-b9C" id="yod-UP-aX2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="137.18140929535232"/>
         </scene>
     </scenes>
 </document>

@@ -34,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F11346E1DEF3A71005F6CF5 /* WebViewTemplate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WebViewTemplate.entitlements; sourceTree = "<group>"; };
 		9F7B0D201DEC7FCE00F3E695 /* WebViewTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebViewTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F7B0D231DEC7FCE00F3E695 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F7B0D251DEC7FCE00F3E695 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +98,7 @@
 		9F7B0D221DEC7FCE00F3E695 /* WebViewTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				9F11346E1DEF3A71005F6CF5 /* WebViewTemplate.entitlements */,
 				9F7B0D231DEC7FCE00F3E695 /* AppDelegate.swift */,
 				9F7B0D251DEC7FCE00F3E695 /* ViewController.swift */,
 				9F7B0D271DEC7FCE00F3E695 /* Main.storyboard */,
@@ -195,6 +197,11 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = AN2TQ2JH4B;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.SafariKeychain = {
+								enabled = 1;
+							};
+						};
 					};
 					9F7B0D331DEC7FCE00F3E695 = {
 						CreatedOnToolsVersion = 8.1;
@@ -415,6 +422,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WebViewTemplate/WebViewTemplate.entitlements;
 				DEVELOPMENT_TEAM = AN2TQ2JH4B;
 				INFOPLIST_FILE = WebViewTemplate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -428,6 +436,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WebViewTemplate/WebViewTemplate.entitlements;
 				DEVELOPMENT_TEAM = AN2TQ2JH4B;
 				INFOPLIST_FILE = WebViewTemplate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -514,6 +523,7 @@
 				9F7B0D4A1DEC7FCE00F3E695 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9F7B0D4B1DEC7FCE00F3E695 /* Build configuration list for PBXNativeTarget "WebViewTemplateTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +532,7 @@
 				9F7B0D4D1DEC7FCE00F3E695 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9F7B0D4E1DEC7FCE00F3E695 /* Build configuration list for PBXNativeTarget "WebViewTemplateUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +541,7 @@
 				9F7B0D501DEC7FCE00F3E695 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
